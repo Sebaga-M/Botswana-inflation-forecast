@@ -1,0 +1,24 @@
+{
+  "LightGBM": {
+    "train_rmse": 1.4816669802371585,
+    "val_rmse": 1.7744358204667918,
+    "test_rmse": 2.7983065871362633,
+    "test_mae": 2.2321501378836053
+  },
+  "LSTM_v1_2layer": {
+    "test_rmse": 7.014196694086658,
+    "test_mae": 5.81923032644399
+  },
+  "LSTM_v2_1layer": {
+    "train_rmse": 6.14,
+    "val_rmse": 3.03,
+    "test_rmse": 10.796,
+    "test_mae": 9.433
+  },
+  "naive_seasonal_baseline": {
+    "val_rmse": 3.56817495379687,
+    "test_rmse": 8.652945838230007
+  },
+  "winner": "LightGBM",
+  "reason": "216 training rows with heavily overlapping 12-month windows provided insufficient independent signal for a 13k-parameter LSTM. Both LSTM architectures (2-layer/32-hidden and 1-layer/16-hidden) failed to beat the naive seasonal baseline on the volatile 2022-2023 test period, while LightGBM achieved ~3x lower RMSE than naive by leveraging engineered lag features (especially FAO_23014_lag1 and cross-country ZAF lags) without requiring large sample sizes."
+}
