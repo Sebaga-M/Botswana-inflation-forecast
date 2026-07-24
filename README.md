@@ -48,7 +48,7 @@ identification and correction, residual diagnostics, and final forecast generati
 
 | Model | Test RMSE | Test MAE |
 |---|---|---|
-| **LightGBM (winner)** | **2.798** | **2.232** |
+| **LightGBM (winner)** | **2.631** | **--** |
 | LSTM | 7.014 | 5.819 |
 | Naive baseline | 8.653 | 7.844 |
 
