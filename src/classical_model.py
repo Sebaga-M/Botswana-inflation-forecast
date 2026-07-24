@@ -102,17 +102,17 @@ X_test, y_test = test_df[feature_cols], test_df["FAO_23014"]
 # ---------------------------------------------------------------
 # 6. Train LightGBM
 # ---------------------------------------------------------------
+
 model = lgb.LGBMRegressor(
-    n_estimators=500,
+    n_estimators=300,
     learning_rate=0.03,
-    max_depth=4,
+    max_depth=3,
     num_leaves=15,
     min_child_samples=10,
     subsample=0.8,
     colsample_bytree=0.8,
     random_state=42,
 )
-
 model.fit(
     X_train, y_train,
     eval_set=[(X_val, y_val)],
