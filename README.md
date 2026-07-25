@@ -27,7 +27,7 @@ the reasoning behind this choice.
 │ ├── classical_model.py # LightGBM implementation
 │ └── deep_learning_model.py # LSTM implementation
 ├── outputs/
-│ └── predictions_2024.csv # Final submitted forecast
+│ └── predictions_2024_v3.csv # Final submitted forecast
 ├── requirements.txt # Python dependencies
 └── README.md
 
